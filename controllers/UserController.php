@@ -1,0 +1,17 @@
+<?php
+class UserController {
+    private $db, $config_warning;
+    
+    public function __construct($db, $config_warning) {
+        $this->db = $db;
+        $this->config_warning = $config_warning;
+    }
+    
+    public function handle($uri) {
+        $this->index();
+    }
+    
+    public function index() {
+        require __DIR__ . '/../views/users.php';
+    }
+} 
